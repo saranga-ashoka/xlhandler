@@ -81,7 +81,7 @@ public class ExcelFileHandler {
             if (!tm.containsKey(key)) {
                 tm.put(key, (String) m.get("Dataset"));
             } else {
-                tm.put(key, tm.get(key).trim() + "," + m.get("Dataset"));
+                tm.put(key, tm.get(key).trim() + "," + ((String) m.get("Dataset")).trim());
             }
         }
         tm.forEach((k, v) -> {
